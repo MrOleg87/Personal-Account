@@ -12,6 +12,6 @@
 Перевести деньги со счёта пользователя другому пользователю
 Запрос POST http://localhost:8081/personal_account/transferMoney/id
 (Param KEY - toID,amount,VALUE - id(кому переводим),Сумма)
-
+--------------
 
 ![База_Данных](https://github.com/MrOleg87/Personal-Account/assets/128096870/b272acb4-2f2d-420c-87f4-909e63bb7b33)

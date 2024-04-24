@@ -61,15 +61,3 @@ public class BalanceService {
 }
 
 
-//@Transactional
-    //public BigDecimal takeMoney(Money money) {
-        //BigDecimal fromBalance = balanceRepository.getBalanceForId(money.getFrom());
-      //  BigDecimal toBalance = balanceRepository.getBalanceForId(money.getTo());
-        //if (fromBalance == null || toBalance == null) throw new IllegalArgumentException("no id");
-       // if (money.getAmount().compareTo(fromBalance)>0) throw new IllegalArgumentException("no money");
-        //BigDecimal updateFromBalance = fromBalance.subtract(money.getAmount());
-        //BigDecimal updateToBalance = fromBalance.add(money.getAmount());
-       // return fromBalance;
-
-
-

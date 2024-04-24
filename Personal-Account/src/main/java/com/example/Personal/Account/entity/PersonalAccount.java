@@ -4,39 +4,54 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "Personal Account")
+@Table(name = "personal_account")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+
 public class PersonalAccount {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private long id;
     @Column(name = "balance")
-    private BigDecimal amount;
+    private BigDecimal balance;
 
-    public PersonalAccount(Long id, BigDecimal amount) {
+    private String status;
+
+    public PersonalAccount(long id, BigDecimal balance) {
         this.id = id;
-        this.amount = amount;
+        this.balance = balance;
     }
 
     public PersonalAccount() {
     }
 
-    public Long getId(long id) {
-        return this.id;
+    public long getId() {
+        return id;
     }
 
     public void setId(long id) {
         this.id = id;
     }
 
-    public BigDecimal getAmount(BigDecimal amount) {
-        return this.amount;
+    public BigDecimal getBalance() {
+        return this.balance;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
+    public PersonalAccount(long id, BigDecimal balance, String status) {
+        this.id = id;
+        this.balance = balance;
+        this.status = status;
+    }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
